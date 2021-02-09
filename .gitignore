@@ -4,3 +4,4 @@ parser.out
 dist
 build
 Tinyquery.egg-info
+.python-version
