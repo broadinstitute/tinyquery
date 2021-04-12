@@ -159,7 +159,7 @@ t_ignore = ' \t\n'
 
 
 def t_error(t):
-    raise SyntaxError('Unexpected token: ' + str(t))
+    raise SyntaxError('Blarg Unexpected token: ' + str(t))
 
 
 def lex_text(text):
