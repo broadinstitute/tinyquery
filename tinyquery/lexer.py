@@ -115,7 +115,7 @@ def t_INTEGER(token):
 
 # Taken from example at http://www.dabeaz.com/ply/ply.html#ply_nn6
 def t_ID(t):
-    r"""[a-zA-Z_][a-zA-Z_0-9-]*"""
+    r"""[a-zA-Z_][a-zA-Z_0-9]*"""
     # Specific tokens should be lower-cased here, but functions can't be
     # lower-cased at lex time since we don't know what IDs are functions vs.
     # columns or tables. We lower-case function names at parse time.
@@ -127,8 +127,8 @@ def t_ID(t):
     return t
 
 
-def t_backticks_ID(t):
-    r"""`[a-zA-Z_][a-zA-Z_0-9-]*`"""
+def t_backticks_id(t):
+    r"""`[a-zA-Z_0-9\.-]*`"""
     # Tokens can be surrounded with backticks, in which case they're
     # allowed to start with numbers and contain dots (and can be table names).
     # Tokens specified this way
